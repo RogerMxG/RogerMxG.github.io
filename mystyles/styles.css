@@ -1,0 +1,555 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .navbar-expand-lg {
+    background-color: #FF94CC;
+    font-weight: 500;
+    color: #fff;
+  }
+
+  .navbar-brand {
+    margin-left: 1.1em;
+    margin-right: -0.5em;
+    font-family: Caudex;
+    font-weight: 600;
+  }
+  
+  .navbar-brand img {
+    width: 1.4em; 
+    height: 1.4em; 
+    padding-bottom: 0.25em;
+  }
+
+  .nav-item {
+    font-family: Caudex;
+    font-weight: 600;
+  }
+  /* CUSTOMIZE THE CAROUSEL
+  -------------------------------------------------- */
+  
+  /* Carousel base class */
+  .carousel {
+    margin-bottom: 3rem;
+  }
+  /* Since positioning the image, we need to help out the caption */
+  .carousel-caption {
+    bottom: 2em;
+  }
+  .btn-first {
+    background-color: #ffbb94;
+    /*#ffbb94*/
+    font-size: 1.1em;
+    font-weight: 600;
+    color: white;
+    transition: 1.5s;
+  }
+  .btn-first:hover {
+    color: white;
+    box-shadow: 0 10px 15px 1px #ffcfb3;
+    transform: translateY(-10px);
+
+  }
+  .first {
+    font-size: 3em;
+    font-weight: 600;
+  }
+  .btn-second {
+    background-color: #acc6ff;
+    /*#ffbb94*/
+    font-size: 1.1em;
+    font-weight: 600;
+    color: white;
+    transition: 1.5s;
+  }
+  .btn-second:hover {
+    color: white;
+    box-shadow: 0 10px 15px 1px #86abfa;
+    transform: translateY(-10px);
+
+  }
+  .second {
+    font-size: 3em;
+    font-weight: 600;
+    color: #98b8ff;
+  }
+  .btn-third {
+    background-color: #b2acff;
+    /*#ffbb94*/
+    font-size: 1.1em;
+    font-weight: 600;
+    color: white;
+    transition: 1.5s;
+  }
+  .btn-third:hover {
+    color: white;
+    box-shadow: 0 10px 15px 1px #9c95fd;
+    transform: translateY(-10px);
+
+  }
+  .third {
+    font-size: 3em;
+    font-weight: 600;
+    color: white;
+  }
+
+  .profiles h1 {
+    font-family: Caudex;
+    font-weight: 700;
+    font-size: 3em;
+    text-align: center;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  
+  .image {
+    position: relative;
+    width: 100%;
+}
+
+.image__img {
+    display: block;
+    width: 100%;
+}
+
+.image__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    font-family: 'Caudex';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.6s;
+}
+
+.image__overlay--blur {
+    backdrop-filter: blur(5px);
+}
+
+.image__overlay--primary {
+    background: #f7afd4;
+}
+
+.image__overlay > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.image__overlay:hover {
+    opacity: 1;
+}
+
+.image__overlay:hover > * {
+    transform: translateY(0);
+}
+
+.image__title {
+    font-size: 2em;
+    font-family: Caudex;
+    font-weight: bold;
+}
+
+.image__description {
+    font-size: 1.25em;
+    margin-top: 0.25em;
+}
+
+  /* Featurettes
+  ------------------------- */
+  
+  .featurette-divider {
+    margin: 3rem 0; /* Space out the Bootstrap <hr> more */
+  }
+  
+  .player-p{
+    font-family: Caudex;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-top: 3em;
+    text-align: center;
+    align-items: center;
+
+  }
+
+  .btn-read{
+    background-color: #acc6ff;
+    margin-top: 1.1em;
+    margin-bottom: 2em;
+    color: white;
+    float: right;
+    margin-right: 1em;
+    transition: 1.5s;
+  }
+
+  .btn-read:hover{
+    color: white;
+    box-shadow: 0 10px 15px 1px #d39ab7;
+    transform: translateY(-15px);
+  }
+
+  
+  .btn-read2{
+    background-color: #ff9beb;
+    margin-top: 1.1em;
+    margin-bottom: 2em;
+    color: white;
+    float: right;
+    margin-right: 1em;
+    transition: 1.5s;
+  }
+  .btn-read2:hover{
+    color: white;
+    box-shadow: 0 10px 15px 1px #acc6ff;
+    transform: translateY(-15px);
+  }
+
+
+  .btn-back-top{
+    background-color: #f3a4e3;
+    color: white;
+    margin-top: -0.5em;
+    transition: 1.5s;
+  }
+  .btn-back-top:hover{
+    color: white;
+    box-shadow: 0 10px 15px 1px hsl(330, 100%, 72%);
+    transform: translateY(-15px);
+  }
+
+  /* RESPONSIVE CSS
+  -------------------------------------------------- */
+  
+  @media (min-width: 40em) {
+    /* Bump up size of carousel content */
+    .carousel-caption p {
+      margin-bottom: 1.25rem;
+      font-size: 1.25rem;
+      line-height: 1.4;
+    }
+  
+    .featurette-heading {
+      font-size: 40px;
+    }
+  }
+  
+  @media (min-width: 62em) {
+    .featurette-heading {
+      margin-top: 5rem;
+    }
+  }
+
+  /*Media Player
+  ----------------------------------------------------------*/
+.music-player-container1{
+  background: #94a4ff;
+  backdrop-filter: blur(10px);
+  margin: auto;
+  margin-top: 1.1em;
+  margin-bottom: 1.1em;
+  height: 10em;
+  width: auto;
+  border-radius: 10px;
+  padding: 2em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 1.0s;
+}
+.music-player-container1:hover {
+box-shadow: 0 10px 15px 1px #698ef3;
+transform: translateY(-15px);
+}
+
+.title-music-container{
+    width: 80%;
+    height: 80%;
+    width: fit-content;
+    color: white;
+    margin-right: auto;
+    margin-left: 10%;
+}
+
+.song-title{
+    font-weight: 600;
+    font-size: 17px;
+    letter-spacing: 0.5px;
+}
+
+.song-author{
+    margin-top: 0.1rem;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1px;
+}
+
+.controls-music-container{
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.progress-song-container{
+    margin-top: 0.6rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.progress-bar{
+    height: 3px;
+    border-radius: 3px;
+    width: 100%;
+    background-color: rgb(232, 221, 221);
+    position: relative;
+}
+
+.progress{
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    border-radius: 3px;
+    background-color: white;
+}
+
+.time-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 12px;
+}
+
+.time-left{
+    margin-top: 0.3rem;
+}
+
+.main-song-controls{
+    height: 30px;
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.icon{
+    height: 100%;
+    width: auto;
+    opacity: 0.6;
+    cursor: pointer;
+    color: white;
+}
+
+.icon:hover{
+    opacity: 1;
+}
+
+audio{
+    display: none;
+}
+
+/* DISCOGRAPHY
+-----------------------------------*/
+.card-text {
+  font-weight: 600;
+}
+
+.card{
+  transition: 1.5s;
+}
+.card:hover{
+  transform: scale(1.06)
+} 
+.btn-sm-fol {
+  background-color: #94a4ff;
+  color: #fff;
+  font-weight: 500;
+  transition: 1.5s;
+}
+.btn-sm-fol:hover {
+  color: #fff;
+  font-weight: 500;
+  box-shadow: 0 5px 10px 0 #5670ff;
+  transform: translateY(-10px);
+}
+
+.btn-sm-tf {
+  background-color: #ff94d2;
+  color: #fff;
+  font-weight: 500;
+  transition: 1.5s;
+}
+.btn-sm-tf:hover {
+  color: #fff;
+  font-weight: 500;
+  box-shadow: 0 5px 10px 0 #ff4cb4;
+  transform: translateY(-10px);
+}
+
+.btn-sm-tl {
+  background-color: #3022ff;
+  color: #fff;
+  font-weight: 500;
+  transition: 1.5s;
+}
+.btn-sm-tl:hover {
+  color: #fff;
+  font-weight: 500;
+  box-shadow: 0 5px 10px 0 #4a22ff;
+  transform: translateY(-10px);
+}
+
+.btn-sm-cm {
+  background-color: #b42323;
+  color: #fff;
+  font-weight: 500;
+  transition: 1.5s;
+}
+.btn-sm-cm:hover {
+  color: #fff;
+  font-weight: 500;
+  box-shadow: 0 5px 10px 0 #ff1a1a;
+  transform: translateY(-10px);
+}
+
+.btn-sm-ewo {
+  background-color: #727070;
+  color: #fff;
+  font-weight: 500;
+  transition: 1.5s;
+}
+.btn-sm-ewo:hover {
+  color: #fff;
+  font-weight: 500;
+  box-shadow: 0 5px 10px 0 #3d3a3a;
+  transform: translateY(-10px);
+}
+
+.btn-sm-mm {
+  background-color: #ca9562;
+  color: #fff;
+  font-weight: 500;
+  transition: 1.5s;
+}
+.btn-sm-mm:hover {
+  color: #fff;
+  font-weight: 500;
+  box-shadow: 0 5px 10px 0 #a85a12;
+  transform: translateY(-10px);
+}
+
+.btn-sm-fl {
+  background-color: #e9d732;
+  color: #fff;
+  font-weight: 500;
+  transition: 1.5s;
+}
+.btn-sm-fl:hover {
+  color: #fff;
+  font-weight: 500;
+  box-shadow: 0 5px 10px 0 #d8c40e;
+  transform: translateY(-10px);
+}
+
+.btn-sm-fy {
+  background-color: #ffc494;
+  color: #fff;
+  font-weight: 500;
+  transition: 1.5s;
+}
+.btn-sm-fy:hover {
+  color: #fff;
+  font-weight: 500;
+  box-shadow: 0 5px 10px 0 #ffa154;
+  transform: translateY(-10px);
+}
+
+.btn-sm-wl {
+  background-color:#69e0f0;
+  color: #fff;
+  font-weight: 500;
+  transition: 1.5s;
+}
+.btn-sm-wl:hover {
+  color: #fff;
+  font-weight: 500;
+  box-shadow: 0 5px 10px 0 #1dbfd4;
+  transform: translateY(-10px);
+}
+
+/* CARD ABOUT ME
+------------------------------*/
+.cards {
+  width: 21rem; 
+  height: 31em; 
+  margin-top: 3em; 
+  overflow:hidden;
+  transition: all 0.2s ease;
+  border-radius: 15px;
+  transition: 1.2s;
+}
+.cards:hover {
+  box-shadow: 0 5px 15px 0 #ca25a6;
+  transform: scale(1.06)
+}
+.circle {
+  width: 21em;
+  height: 20em;
+  border-radius: 50%;
+  background: #ffbbe0;
+  margin-top: -10em;
+  bottom: -30%;
+  left: 50%
+  transform: translate(-50%);
+}
+.card-img {
+  width: 11.5em;
+  height: 11.5;
+  background: #fff;
+  padding: 5px;
+  border-radius: 50%;
+  bottom: -30%;
+  left: 50%
+  transform: translate(-50%);
+  margin-top: -7.5em;
+}
+.card-title {
+  font-family: Caudex;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: #ba7b7c;
+}
+.card-title2 {
+  font-weight: 400;
+  color: #ff97d9;
+}
+.ar {
+  transition: all 0.5s ease;
+  margin-left: 20px;
+}
+
+.ar:hover {
+  transform: scale(1.3)
+}
+  
